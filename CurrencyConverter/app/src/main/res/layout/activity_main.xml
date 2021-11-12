@@ -1,0 +1,72 @@
+<?xml version="1.0"
+    encoding="utf-8"?> <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text=" CURRENCY \n CONVERTER"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Type Indian Rs"
+        android:inputType="number|textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/usdButton"
+        app:layout_constraintStart_toStartOf="@+id/input"
+        app:layout_constraintTop_toBottomOf="@+id/input">
+        <RadioButton
+            android:id="@+id/usdButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USD" />
+        <RadioButton
+            android:id="@+id/euroButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EURO" />
+        <RadioButton
+            android:id="@+id/yenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YEN" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/convertButton" android:layout_width="200dp"
+
+        android:layout_height="wrap_content" android:layout_marginTop="16dp"
+        android:text="CONVERT"
+        app:layout_constraintStart_toStartOf="@+id/input"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number|textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/convertButton"
+        app:layout_constraintTop_toBottomOf="@+id/convertButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
